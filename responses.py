@@ -26,7 +26,7 @@ def handle_build(message) -> str:
         "kestrel": [emojis["SorrowBlade"], emojis["Cooldown_Boots"], emojis["Bonesaw"], emojis["Tyrants_Monocle"], emojis["Tyrants_Monocle"], "\n", emojis["SorrowBlade"], emojis["Cooldown_Boots"], emojis["Bonesaw"], emojis["Serpent_Mask"], emojis["Breaking_Point"]],
         "gwen": [emojis["SorrowBlade"], emojis["Cooldown_Boots"], emojis["Bonesaw"], emojis["Tyrants_Monocle"], emojis["Tyrants_Monocle"], "\n", emojis["SorrowBlade"], emojis["Breaking_Point"]],
         "silvernail": [emojis["SorrowBlade"], emojis["Cooldown_Boots"], emojis["Bonesaw"], emojis["Tyrants_Monocle"], emojis["Tyrants_Monocle"]],
-        "kensei": [emojis["Bonesaw"], emojis["Cooldown_Boots"], emojis["Breaking_Point"], emojis["Serpent_Mask"], emojis["Serpent_Mask"], " ", "(heavy steel and then bonesaw)", '\n', emojis["Bonesaw"], emojis["Cooldown_Boots"], emojis["Breaking_Point"], emojis["Poisoined_Shiv"], emojis["SorrowBlade"], " ", "(heavy steel and then bonesaw)"],
+        "kensei": [emojis["Bonesaw"], emojis["Cooldown_Boots"], emojis["Breaking_Point"], emojis["Serpent_Mask"]," ", "(heavy steel and then bonesaw)", '\n', emojis["Bonesaw"], emojis["Cooldown_Boots"], emojis["Breaking_Point"], emojis["Poisoined_Shiv"], emojis["SorrowBlade"], " ", "(heavy steel and then bonesaw)"],
         "kinetic": [emojis["Serpent_Mask"], emojis["Cooldown_Boots"], emojis["Bonesaw"], emojis["Breaking_Point"]],
         "caine": ["<:caine:>"],
         "celeste": ["<:celeste:>"],
