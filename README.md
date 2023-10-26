@@ -7,7 +7,7 @@ Made on Python 3.11
 
 # Run Locally using your own bot
 
-Inside bot.py you will find a variable named TOKEN, change the value that it inherents to a discord bot tocken of yours and it should work,
+Inside bot.py you will find a variable named TOKEN, change the value that it is assigned to a discord bot token of yours and it should work,
 
 Example
 
