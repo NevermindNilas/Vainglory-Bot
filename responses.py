@@ -22,6 +22,3 @@ def handle_meme():
     meme = discord.Embed(title=f"{data['title']}").set_image(url=f"{data['url']}")
     
     return meme
-
-build = handle_build("kensei")
-print(build)
