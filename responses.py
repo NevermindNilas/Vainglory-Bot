@@ -4,9 +4,6 @@ import discord
 
 def handle_build(message) -> str:
     p_message = message.lower()
-    prefix = "!build" if p_message.startswith("!build") else "!b"
-    p_message = p_message[len(prefix):]
-    
     emojis = {
         "Bonesaw": "<:emoji_32:1151165758487941191>",
         "SorrowBlade": "<:emoji_38:1151166970956353617>",
@@ -82,7 +79,7 @@ def handle_build(message) -> str:
     response = f"The build for ***{hero_name.capitalize()}*** is:\n{''.join(hero_emojis)}"
     return response
 
-def handle_meme() -> str:
+def handle_meme():
     content = get("https://meme-api.com/gimme").text
     data = json.loads(content)
     meme = discord.Embed(title=f"{data['title']}").set_image(url=f"{data['url']}")
