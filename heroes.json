@@ -9,7 +9,12 @@
         "Tension_Bow": "<:emoji_33:1151166013291909120>",
         "Cooldown_Sword": "<:emoji_36:1151166572099018813>",
         "Serpent_Mask": "<:emoji_37:1151166733776863315>",
-        "Poisoined_Shiv": "<:emoji_35:1151166333325676696>"
+        "Poisoined_Shiv": "<:emoji_35:1151166333325676696>",
+        "Shiversteel:": "<:emoji_43:1151168450467729539>",
+        "StormCrown": "<:emoji_44:1151168612770513006>>",
+        "Contraption": "<:emoji_45:1151168791363989535>",
+        "War_Treads": "<:emoji_47:1151169321310093452>",
+        "Fast_Boots": "<:emoji_48:1151169505846898800>"
     },
     "heroes": {
         "ringo": [
