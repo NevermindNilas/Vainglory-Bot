@@ -46,6 +46,7 @@ def run_discord_bot():
       headers = {"Authorization": f"Bearer {API_KEY}"}
       async with session.post("https://api.openai.com/v1/chat/completions", json=payload, headers=headers) as resp:
         response = await resp.json()
+        response_dic = response.get("choices")[0]
         print("THIS IS THE RESPONSE", response)
         await interaction.response.send_message(response["choices"][0]["text"])
         
