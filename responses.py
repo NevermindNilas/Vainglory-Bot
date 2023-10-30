@@ -22,3 +22,6 @@ def handle_meme():
     meme = discord.Embed(title=f"{data['title']}").set_image(url=f"{data['url']}")
     
     return meme
+
+def handle_gpt():
+    return "Not implemented yet"
