@@ -7,6 +7,9 @@ def handle_build(message) -> discord.Embed:
     p_message = message.lower()
     data = json.loads(open("heroes.json", "r").read())
     
+    # added this cuz peeps used to type "bf" instead of "blackfeather"
+    # and it is really annoying to write out full names
+    
     if p_message == "bf":
         p_message = "blackfeather"
     elif p_message == "war":
@@ -50,5 +53,3 @@ def handle_abbreviation():
     embed.set_footer(text="Made by: @nilasedits")
     
     return embed
-def handle_gpt():
-    return "Not implemented yet"

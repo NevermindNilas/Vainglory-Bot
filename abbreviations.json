@@ -7,7 +7,7 @@
         "AS", 
         "MS"
     ],
-    
+
     "value": [
         "Health",
         "Weapon Power", 
@@ -15,6 +15,12 @@
         "Cooldown", 
         "Attack Speed", 
         "Move Speed"
+    ],
+    
+    "hero": [
+        "War",
+        "BF",
+        "Grump"
     ]
     
 }
