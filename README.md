@@ -19,4 +19,4 @@ https://youtu.be/SPTfmiYiuok?si=2NMNL5awW8gw2jvR&t=3522
 
 otherwise use my inv link:
 
-https://discord.com/api/oauth2/authorize?client_id=658745002465427518&permissions=687195080768&scope=bot
+https://discord.com/api/oauth2/authorize?client_id=658745002465427518&permissions=689342564416&scope=bot
