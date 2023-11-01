@@ -3,24 +3,34 @@
         "HP",
         "WP", 
         "CP", 
-        "CD", 
+        "CD",
+        "CDR",
         "AS", 
         "MS"
     ],
 
-    "value": [
+    "values": [
         "Health",
         "Weapon Power", 
         "Crystal Power", 
-        "Cooldown", 
+        "Cooldown",
+        "Cooldown Reduction",
         "Attack Speed", 
         "Move Speed"
     ],
     
-    "hero": [
+    "hero_shorts": [
         "War",
-        "BF",
-        "Grump"
+        "Bf",
+        "Grump",
+        "Silver or Nail"
+    ],
+
+    "hero_fulls": [
+        "Warhawk",
+        "Blackfeather",
+        "Grumpjaw",
+        "Silvernail"
     ]
     
 }

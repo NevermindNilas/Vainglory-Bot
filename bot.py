@@ -9,7 +9,7 @@ from configs import TOKEN, API_KEY
 def run_discord_bot():
   intents = discord.Intents.default()
   intents.message_content = True
-  bot = commands.Bot(command_prefix='!', intents=intents)
+  bot = commands.Bot(command_prefix='/', intents=intents)
 
   @bot.event
   async def on_ready():
