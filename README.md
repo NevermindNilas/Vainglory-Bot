@@ -1,7 +1,7 @@
 # Vainglory-Bot
-Made with Python 3.11
+Made using Python 3.11
 
-# Install Dependencies
+## Install Dependencies
 
 > pip install -r requirements.txt
 
@@ -14,7 +14,7 @@ Made with Python 3.11
 - /help: Shows this message
 - /commands: Shows this message
 
-# Run Locally using your own bot
+## Run Locally using your own bot
 
 Inside configs.py you will find a variable named TOKEN, change the value that it is assigned to a discord bot token of yours and it should work,
 
@@ -22,7 +22,7 @@ Example
 
 > TOKEN = "DSAJFDOANJSJFNASDFOIOOAI"
 
-# 24/7 host
+## 24/7 host
 
 https://youtu.be/SPTfmiYiuok?si=2NMNL5awW8gw2jvR&t=3522
 

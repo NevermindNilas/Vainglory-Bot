@@ -6,6 +6,5 @@
         "/repo": "Sends a link to the bot's repository",
         "/help": "Shows this message",
         "/commands": "Shows this message"
-        
     }
 }
