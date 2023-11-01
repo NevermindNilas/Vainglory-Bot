@@ -33,6 +33,24 @@ def run_discord_bot():
   async def abbreviation(interaction: discord.Interaction):
     response = responses.handle_abbreviation()
     await interaction.response.send_message(embed=response)
-        
+    
+  @bot.tree.command(name="commands", description="Shows a list of commands")
+  @app_commands.describe()
+  async def list_commands(interaction: discord.Interaction):
+    response = responses.handle_commands()
+    await interaction.response.send_message(embed=response)
+    
+  @bot.tree.command(name="help", description="Shows a list of commands")
+  @app_commands.describe()
+  async def list_commands(interaction: discord.Interaction):
+    response = responses.handle_commands()
+    await interaction.response.send_message(embed=response)
+  
+  @bot.tree.command(name="repo", description="Output the github repo of the project")
+  @app_commands.describe()
+  async def repo(interaction: discord.Interaction):
+    response = responses.handle_repo()
+    await interaction.response.send_message(embed=response)
+    
   keep_alive()
   bot.run(TOKEN)

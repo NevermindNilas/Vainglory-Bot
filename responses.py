@@ -64,3 +64,20 @@ def handle_abbreviation():
     embed.set_footer(text="Made by: @nilasedits")
     
     return embed
+
+def handle_commands():
+    data = load_json("commands.json")
+    commands = data["commands"]
+    embed = discord.Embed(title="Commands")
+    field_value = ""
+    for command, description in commands.items():
+        field_value += f"{command} - {description}\n"
+    embed.add_field(name="", value=field_value, inline=False)
+    embed.set_footer(text="Made by: @nilasedits")
+    return embed
+
+def handle_repo():
+    embed = discord.Embed(title="Github Repo", url="https://github.com/NevermindNilas/Vainglory-Bot", description="The github repo for this project.")
+    embed.set_footer(text="Made by: @nilasedits")
+    
+    return embed
