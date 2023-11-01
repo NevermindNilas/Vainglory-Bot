@@ -3,18 +3,21 @@ import json
 import discord
 import json
 
-def handle_build(message) -> str:
+def handle_build(message) -> discord.Embed:
     p_message = message.lower()
     data = json.loads(open("heroes.json", "r").read())
-
+    
     heroes = data["heroes"]
 
     if p_message in heroes:
         output = heroes[p_message]
-        response = f"The build for ***{p_message.capitalize()}*** is:\n{''.join(output)}"
-        return response
+        response = f"The build for ***{p_message.capitalize()}*** is:"
+        embed = discord.Embed(title=response)
+        embed.add_field(name = "", value="".join(output), inline=False)
+        embed.set_footer(text="Made by: @nilasedits")
+        return embed
     else:
-        return "The input is not a valid hero name."
+        return discord.Embed(title=f"The input '{message}' is not a valid hero name.")
 
 def handle_meme():
     content = get("https://meme-api.com/gimme").text

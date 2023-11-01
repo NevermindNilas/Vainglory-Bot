@@ -22,7 +22,7 @@ def run_discord_bot():
   @app_commands.describe(arg="Shows a build for a hero")
   async def build(interaction: discord.Interaction, arg: str):
     response = responses.handle_build(arg)
-    await interaction.response.send_message(response)
+    await interaction.response.send_message(embed=response)
 
   @bot.tree.command(name="meme", description="Shows a random meme")
   @app_commands.describe()
