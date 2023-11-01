@@ -7,13 +7,16 @@ def handle_build(message) -> discord.Embed:
     p_message = message.lower()
     data = json.loads(open("heroes.json", "r").read())
     
+    if p_message == "bf":
+        p_message = "blackfeather"
+        
     heroes = data["heroes"]
 
     if p_message in heroes:
         output = heroes[p_message]
         response = f"The build for ***{p_message.capitalize()}*** is:"
         embed = discord.Embed(title=response)
-        embed.add_field(name = "", value="".join(output), inline=False)
+        embed.add_field(name="", value="".join(output), inline=False)
         embed.set_footer(text="Made by: @nilasedits")
         return embed
     else:
