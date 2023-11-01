@@ -3,7 +3,6 @@ from discord.ext import commands
 from discord import app_commands
 import responses
 from keep_alive import keep_alive
-import aiohttp
 from configs import TOKEN, API_KEY
 
 def run_discord_bot():
