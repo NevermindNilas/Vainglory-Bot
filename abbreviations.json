@@ -1,0 +1,20 @@
+{   
+    "stats": [
+        "HP",
+        "WP", 
+        "CP", 
+        "CD", 
+        "AS", 
+        "MS"
+    ],
+    
+    "value": [
+        "Health",
+        "Weapon Power", 
+        "Crystal Power", 
+        "Cooldown", 
+        "Attack Speed", 
+        "Move Speed"
+    ]
+    
+}

@@ -9,6 +9,12 @@ def handle_build(message) -> discord.Embed:
     
     if p_message == "bf":
         p_message = "blackfeather"
+    elif p_message == "war":
+        p_message = "warhawk"
+    elif p_message == "grump":
+        p_message = "grumpjaw"
+    elif p_message == "silver":
+        p_message = "silvernail"
         
     heroes = data["heroes"]
 
@@ -29,5 +35,20 @@ def handle_meme():
     
     return meme
 
+def handle_abbreviation():
+    data = json.loads(open("abbreviations.json", "r").read())
+    stats = data["stats"]
+    values = data["value"]
+    embed = discord.Embed(title="Abbreviations")
+
+    field_value = ""
+    for stat, value in zip(stats, values):
+        field_value += f"{stat}: {value}\n"
+
+    embed.add_field(name="Stats / Attributes", value=field_value, inline=False)
+    
+    embed.set_footer(text="Made by: @nilasedits")
+    
+    return embed
 def handle_gpt():
     return "Not implemented yet"

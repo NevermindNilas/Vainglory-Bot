@@ -3,7 +3,6 @@ from discord.ext import commands
 from discord import app_commands
 import responses
 from keep_alive import keep_alive
-import os
 import aiohttp
 from configs import TOKEN, API_KEY
 
@@ -49,6 +48,12 @@ def run_discord_bot():
         response_dic = response.get("choices")[0]
         print("THIS IS THE RESPONSE", response)
         await interaction.response.send_message(response["choices"][0]["text"])
+  
+  @bot.tree.command(name="abbreviations", description="Shows a list of abbreviations")
+  @app_commands.describe()
+  async def abbreviation(interaction: discord.Interaction):
+    response = responses.handle_abbreviation()
+    await interaction.response.send_message(embed=response)
         
   keep_alive()
   bot.run(TOKEN)
