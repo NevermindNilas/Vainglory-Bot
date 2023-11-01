@@ -1,5 +1,5 @@
 # Vainglory-Bot
-Made on Python 3.11
+Made with Python 3.11
 
 # Install Dependencies
 
