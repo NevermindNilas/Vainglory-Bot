@@ -19,7 +19,6 @@ def handle_build(message) -> discord.Embed:
     }
     
     p_message = name_map.get(p_message, p_message)
-
     heroes = data["heroes"]
 
     if p_message in heroes:
@@ -33,7 +32,6 @@ def handle_build(message) -> discord.Embed:
     embed.set_footer(text="Made by: @nilasedits")
     return embed
 
-
 def handle_meme():
     content = get("https://meme-api.com/gimme").text
     data = json.loads(content)
@@ -41,7 +39,7 @@ def handle_meme():
     return meme
 
 def handle_abbreviation():
-    data = json.loads(open("abbreviations.json", "r").read())
+    data = json.loads(open("commands.json", "r").read())
     embed = discord.Embed(title="Abbreviations")
     
     # Items
@@ -68,7 +66,6 @@ def handle_abbreviation():
     
     embed.add_field(name="Heroes", value=heroes_values, inline=False)
     
-    
     embed.set_footer(text="Made by: @nilasedits")
     return embed
 
@@ -77,8 +74,10 @@ def handle_commands():
     commands = data["commands"]
     embed = discord.Embed(title="Commands")
     field_value = ""
+    
     for command, description in commands.items():
         field_value += f"{command}: {description}\n"
+        
     embed.add_field(name="", value=field_value, inline=False)
     embed.set_footer(text="Made by: @nilasedits")
     return embed

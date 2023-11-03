@@ -13,6 +13,7 @@ Made using Python 3.11
 - /repo: Sends a link to the bot's repository
 - /help: Shows this message
 - /commands: Shows this message
+- /emojis: Shows all of the available emojis
 
 ## Run Locally using your own bot
 
