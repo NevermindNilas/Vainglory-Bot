@@ -27,10 +27,12 @@ def handle_build(message) -> discord.Embed:
         response = f"The build for ***{p_message.capitalize()}*** is:"
         embed = discord.Embed(title=response)
         embed.add_field(name="", value="".join(output), inline=False)
-        embed.set_footer(text="Made by: @nilasedits")
-        return embed
     else:
-        return discord.Embed(title=f"The input '{message}' is not a valid hero name.")
+        embed = discord.Embed(title=f"The input '{message}' is not a valid hero name.")
+        
+    embed.set_footer(text="Made by: @nilasedits")
+    return embed
+
 
 def handle_meme():
     content = get("https://meme-api.com/gimme").text
