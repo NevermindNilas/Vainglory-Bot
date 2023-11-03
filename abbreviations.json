@@ -1,36 +1,37 @@
 {   
-    "stats": [
-        "HP",
-        "WP", 
-        "CP", 
-        "CD",
-        "CDR",
-        "AS", 
-        "MS"
-    ],
-
-    "values": [
-        "Health",
-        "Weapon Power", 
-        "Crystal Power", 
-        "Cooldown",
-        "Cooldown Reduction",
-        "Attack Speed", 
-        "Move Speed"
-    ],
+    "stats": {
+        "HP": "Health Point",
+        "WP": "Weapon Power",
+        "CP": "Crystal Power",
+        "CD": "Cooldown",
+        "CDR": "Cooldown Reduction",
+        "AS": "Attack Speed",
+        "MS": "Move Speed"
+    },
     
-    "hero_shorts": [
-        "War",
-        "Bf",
-        "Grump",
-        "Silver or Nail"
-    ],
-
-    "hero_fulls": [
-        "Warhawk",
-        "Blackfeather",
-        "Grumpjaw",
-        "Silvernail"
-    ]
+    "heroes": {
+        "War": "Warhawk",
+        "Bf": "Blackfeather",
+        "Grump": "Grumpjaw",
+        "Nail": "Silvernail"
+    },
     
+    "items": {
+        "SB": "Sorrowblade",
+        "PS": "Poisoned Shiv",
+        "BS": "Bonesaw",
+        "BP": "Breaking Point",
+        "TB": "Tension Bow",
+        "TT": "Tornado Trigger",
+        "SM": "Serpents Mask",
+        "SS": "Spell Sword",
+        "SG": "Shatterglass",
+        "BM": "Broken Myth",
+        "CW": "Clockwork",
+        "AC": "Alternating Current",
+        "DE": "Dragons Eye",
+        "Eve": "Eve of Harvest",
+        "MJ": "Metal Jacket",
+        "Block": "Reflex Block / Aegis"
+    }
 }

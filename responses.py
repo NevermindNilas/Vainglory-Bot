@@ -40,29 +40,34 @@ def handle_meme():
 
 def handle_abbreviation():
     data = json.loads(open("abbreviations.json", "r").read())
-    stats = data["stats"]
-    values = data["values"]
     embed = discord.Embed(title="Abbreviations")
+    
+    # Items
+    items = data["items"]
+    items_values = ""
+    for item_short, item_full in items.items():
+        items_values += f"{item_short}: {item_full}\n"
+        
+    embed.add_field(name="Items", value=items_values, inline=True)
 
     # Stats / Values / Attributes
-    field_value = ""
-    for stat, value in zip(stats, values):
-        field_value += f"{stat}: {value}\n"
+    stats = data["stats"]
+    stats_values = ""
+    for stat, descriptions in stats.items():
+        stats_values += f"{stat} - {descriptions}\n"
 
-    embed.add_field(name="Stats / Attributes", value=field_value, inline=False)
+    embed.add_field(name="Stats / Attributes", value=stats_values, inline=True)
     
     # Heroes
-    hero_shorts = data["hero_shorts"]
-    hero_fulls = data["hero_fulls"]
+    heroes = data["heroes"]
+    heroes_values = ""
+    for hero_short, hero_full in heroes.items():
+        heroes_values += f"{hero_short}: {hero_full}\n"
     
-    heroes_value = ""
-    for hero_short, hero_full in zip(hero_shorts, hero_fulls):
-        heroes_value += f"{hero_short}: {hero_full}\n"
+    embed.add_field(name="Heroes", value=heroes_values, inline=False)
     
-    embed.add_field(name="Heroes", value=heroes_value, inline=False)
     
     embed.set_footer(text="Made by: @nilasedits")
-    
     return embed
 
 def handle_commands():
@@ -71,7 +76,7 @@ def handle_commands():
     embed = discord.Embed(title="Commands")
     field_value = ""
     for command, description in commands.items():
-        field_value += f"{command} - {description}\n"
+        field_value += f"{command}: {description}\n"
     embed.add_field(name="", value=field_value, inline=False)
     embed.set_footer(text="Made by: @nilasedits")
     return embed
@@ -80,4 +85,18 @@ def handle_repo():
     embed = discord.Embed(title="Github Repo", url="https://github.com/NevermindNilas/Vainglory-Bot", description="The github repo for this project.")
     embed.set_footer(text="Made by: @nilasedits")
     
+    return embed
+
+def handle_emojis():
+    # Print emojis cuz why not
+    data = load_json("heroes.json")
+    emojis = data["emojis"]
+    embed = discord.Embed(title="Emojis")
+    emojis_values = ""
+    
+    for emoji, description in emojis.items():
+        emojis_values += f"{emoji}: {description}\n"
+        
+    embed.add_field(name="", value=emojis_values, inline=False)
+    embed.set_footer(text="Made by: @nilasedits")
     return embed

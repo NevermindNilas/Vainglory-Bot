@@ -51,6 +51,12 @@ def run_discord_bot():
   async def repo(interaction: discord.Interaction):
     response = responses.handle_repo()
     await interaction.response.send_message(embed=response)
+  
+  @bot.tree.command(name="emojis", description="Shows a list of emojis")
+  @app_commands.describe()
+  async def emojis(interaction: discord.Interaction):
+    response = responses.handle_emojis()
+    await interaction.response.send_message(embed=response)
     
   keep_alive()
   bot.run(TOKEN)
