@@ -6,7 +6,9 @@
         "/repo": "Sends a link to the bot's repository",
         "/help": "Shows this message",
         "/commands": "Shows this message",
-        "/emojis": "Shows a list of emojis that are used by the bot"
+        "/emojis": "Shows a list of emojis that are used by the bot",
+        "/comment": " Shows a memorable comment from a user",
+        "/addcomment": "Stores a memorable comment from a user, must be a reply to a message"
     },
     
     "stats": {

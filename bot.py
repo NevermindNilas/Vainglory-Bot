@@ -22,6 +22,23 @@ def run_discord_bot():
     response = responses.handle_build(arg)
     await interaction.response.send_message(embed=response)
 
+  @bot.tree.command(name="comment", description="Shows a comment from a user")
+  @app_commands.describe(arg="Shows a memorable comment from a user")
+  async def comment(interaction: discord.Interaction, arg: str):
+    response = responses.handle_comment(arg)
+    await interaction.response.send_message(embed=response)
+    
+  @bot.command(name="addcomment", description="Adds a comment to a user")
+  async def addcomment(ctx):
+    if ctx.message.reference:
+      replied_to_message = await ctx.channel.fetch_message(ctx.message.reference.message_id)
+      username = replied_to_message.author.name
+      message = replied_to_message.content
+      response = responses.handle_addcomment(username, message)
+      await ctx.send(embed=response)
+    else:
+      await ctx.send("This command must be a reply to a message.")
+      
   @bot.tree.command(name="meme", description="Shows a random meme")
   @app_commands.describe()
   async def meme(interaction: discord.Interaction):
@@ -57,6 +74,8 @@ def run_discord_bot():
   async def emojis(interaction: discord.Interaction):
     response = responses.handle_emojis()
     await interaction.response.send_message(embed=response)
+  
     
+        
   keep_alive()
   bot.run(TOKEN)
